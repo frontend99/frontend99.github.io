@@ -2,22 +2,22 @@
 @media (max-width: 576px){
 /*css nav*/
 html body nav.navbar{
-	background: white;
-	padding: 0;
+    background: white;
+    padding: 0;
 }
 nav a.nav_logo{color: black;}
 nav ul{margin-top: 0!important;}
 nav li:hover a.nav-links{color: white;}
 nav li:hover{border-bottom: 1px solid #ccc0c0;}
 body nav div a.nav-links{
-	font-size: 15px;
-	color: white;
-	line-height: 45px;
-	padding-left: 27px;
+    font-size: 15px;
+    color: white;
+    line-height: 50px;
+    padding-left: 27px;
 }
 body nav.navbar-light button.navbar-toggler{
-	border-color: #00000082;
-	margin-right: 5%;
+    border-color: #00000082;
+    margin-right: 5%;
 }
 body nav div ul.navbar-nav.ml-auto.mt-2.mt-lg-0{margin: 0!important;}
 body nav div ul li.nav-item.active{
@@ -27,7 +27,7 @@ body nav div ul li.nav-item.active{
 /*end css nav*/
 
 /*css header*/
-header{clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%);}
+header{clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%);height: 800px;}
 .header_left{
     width: 100%;
     left: 0;
@@ -38,6 +38,7 @@ header{clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%);}
 .header_left .name{
     font-weight: 300;
     font-size: 20px;
+    text-align: center;
 }
 .header_left .developer{
     text-align: center;
@@ -62,13 +63,13 @@ header{clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%);}
 /*end css header*/
 
 /*css about*/
-.about{height: 880px;}
+.about{height: 1000px;}
 .about .col-sm-6.right{padding: 20px;}
 .about .col-sm-6.left{padding: 20px;}
 .about img{margin: 5%;}
 .about .col-sm-6.right h1{
-	margin-top: 0;
-	text-align: center;
+    margin-top: 0;
+    text-align: center;
 }
 .about .col-sm-6.right .content{
     font-size: 18px;
@@ -76,8 +77,8 @@ header{clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%);}
     margin-bottom: 35px;
 }
 .about .about_info{
-	height: 50%;
-	margin-top: 40px;
+    height: 50%;
+    margin-top: 40px;
 }
 .about .col-sm-6 a.my_experience{
     font-size: 18px;
@@ -90,8 +91,8 @@ header{clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%);}
 
 /*css experience*/
 body div.experience{
-	clip-path: polygon(100% 95%, 50% 100%, 0 95%, 0 0, 50% 5%, 100% 0);
-	height: 1320px;
+    clip-path: polygon(100% 95%, 50% 100%, 0 95%, 0 0, 50% 5%, 100% 0);
+    height: 1320px;
 }
 .experience .col-sm-5.left{
     margin-top: 140px;
@@ -119,7 +120,7 @@ body div.experience{
 .experience .col-sm-7.right .one_exp{width: 48%;}
 .experience .col-sm-7.right .one_exp:hover{border-radius: 0px}
 .experience .col-sm-7.right .one_exp:hover .view_more{
-	opacity: 0;
+    opacity: 0;
 }
 .experience .col-sm-7.right .one_exp .see{display: none;}
 /*end css experience*/
@@ -140,9 +141,9 @@ body div.experience{
 
 /*css more*/
 .more{
-	clip-path: polygon(100% 95%, 50% 100%, 0 95%, 0 0, 50% 5%, 100% 0);
-	height: 830px;
-	margin-top: 0;
+    clip-path: polygon(100% 95%, 50% 100%, 0 95%, 0 0, 50% 5%, 100% 0);
+    height: 830px;
+    margin-top: 0;
 }
 .more .col-sm-6.left{
     margin-top: 100px;
@@ -165,9 +166,9 @@ body div.experience{
 .project{height: 660px;}
 .project h1{float: none;margin-bottom: 0;}
 .project .buttons{
-	margin-left: 0;
-	margin: auto;
-	margin-top: 30px;
+    margin-left: 0;
+    margin: auto;
+    margin-top: 30px;
 }
 .project .all_project{padding: 15px;}
 .project .all_project .one_project{
@@ -180,8 +181,8 @@ body div.experience{
 
 /*css contact*/
 .contact{
-	clip-path: polygon(100% 100%, 50% 100%, 0 100%, 0 0, 50% 5%, 100% 0);
-	height: 750px;
+    clip-path: polygon(100% 100%, 50% 100%, 0 100%, 0 0, 50% 5%, 100% 0);
+    height: 750px;
 }
 .contact .container{padding-top: 100px;}
 .contact .col-sm-7.left{padding: 15px;}
