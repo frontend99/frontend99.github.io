@@ -1,6 +1,6 @@
 /*Code by Proton*/
 @media (max-width: 576px){
-/*css nav*/
+/*css menu*/
 html body nav.navbar{
     background: white;
     padding: 0;
@@ -22,9 +22,27 @@ body nav.navbar-light button.navbar-toggler{
 body nav div ul.navbar-nav.ml-auto.mt-2.mt-lg-0{margin: 0!important;}
 body nav div ul li.nav-item.active{
     background: #414141;
-    border-bottom: 1px solid white;
+    border-bottom: 1px solid #ffffff4f!important;
+    margin: 0;
+    height: 50px;
 }
-/*end css nav*/
+.menu a.navbar-brand{
+    margin: 0;
+    margin-left: 5%;
+    width: 250px;
+}
+.menu img.header_logo{margin-top: 3%;}
+.menu p.protontech{
+    color: black;
+    margin-top: 6%;
+    margin-left: 40%;
+}
+body .menu nav.navbar.fixed-top.navbar-expand-lg.navbar-light div ul li a.nav-link{
+    line-height: 0;
+    padding: 25px;
+    color: white!important;
+}
+/*end css menu*/
 
 /*css header*/
 header{clip-path: polygon(0% 0%, 100% 0, 100% 90%, 50% 100%, 0 90%);height: 800px;}
@@ -201,5 +219,27 @@ body div.experience{
 
 
 @media only screen and (min-device-width : 768px) and (max-device-width : 991px){
-
+.menu{display: none;}
+header{display: none;}
+.about{background-image: url(768-991px.png); height: 500px;}
+.about .row{display: none;}
+.experience{display: none;}
+.skill{display: none;}
+.more{display: none;}
+.project{display: none;}
+.contact{display: none;}
+footer{opacity: 1}
 } /*end css 768-991px - code by Proton*/
+
+@media only screen and (min-device-width : 577px) and (max-device-width : 767px){
+.menu{display: none;}
+header{display: none;}
+.about{background-image: url(577-767px.png); height: 400px;}
+.about .row{display: none;}
+.experience{display: none;}
+.skill{display: none;}
+.more{display: none;}
+.project{display: none;}
+.contact{display: none;}
+footer{opacity: 1}
+}/*end css 577-767px - code by Proton*/

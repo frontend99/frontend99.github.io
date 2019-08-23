@@ -1,7 +1,7 @@
 ﻿document.addEventListener("DOMContentLoaded",function(){
 	var nav = document.querySelector('nav'),
-		myprofile = document.querySelector('nav .nav_logo'),
-		navitems = document.querySelectorAll('nav .nav-links'),
+		protontech = document.querySelector('nav .protontech'),
+		navitems = document.querySelectorAll('nav .nav-link'),
 		scrollStatus = 'smaller100',
 		backToTopStatus = 'ok',
 		aboutLeft = document.querySelector('.about .col-sm-6.left'),
@@ -17,7 +17,7 @@
 		contact = document.querySelector('.contact'),
 		footer = document.querySelector('footer'),
 		nav_li = document.querySelectorAll('nav li'),
-		nav_a = document.querySelectorAll('nav .nav-links'),
+		nav_a = document.querySelectorAll('nav .nav-link'),
 		body = document.querySelector('body'),
 		footer = document.querySelector('footer'),
 		b_all = document.querySelector('b.all'),
@@ -31,7 +31,7 @@
 		if(window.pageYOffset > 100){
 			if(scrollStatus == 'smaller100'){
 				nav.classList.add('scroll_nav');
-				myprofile.classList.add('scroll_profile');
+				protontech.classList.add('scroll_profile');
 				for(var i=0;i<navitems.length;i++){
 					navitems[i].classList.add('scroll_item');
 				}
@@ -42,7 +42,7 @@
 		else if(window.pageYOffset < 100){
 			if(scrollStatus == 'bigger100'){
 				nav.classList.remove('scroll_nav');
-				myprofile.classList.remove('scroll_profile');
+				protontech.classList.remove('scroll_profile');
 				for(var i=0;i<navitems.length;i++){
 					navitems[i].classList.remove('scroll_item');
 				}
