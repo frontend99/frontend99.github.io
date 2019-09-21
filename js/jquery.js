@@ -1,4 +1,11 @@
 $(document).ready(function() {
+	$(window).on('load', function(event) {
+		setTimeout(function() {
+			$('body').removeClass('preloading');
+	   		$('.preloader').fadeOut('fast');
+		}, 3000);
+	});
+
 	$('nav li:nth-child(1) a').on('click', function(event) {
 		event.preventDefault();
 		/* Act on the event */
