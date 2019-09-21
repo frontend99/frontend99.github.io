@@ -296,11 +296,11 @@ html,body{width: 100%; height: 100%;}
 header{
     position: relative;
     width: 100%;
-    height: 700px;
-    background: url('https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-blue-the-internet-dotted-line-internet-data-image_23237.jpg') center center;
+    height: 720px;
+    background: url('https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-tech-line-background-simple-technology-business-image_23246.jpg') center center;
     background-size: cover;
     background-attachment: fixed;
-    clip-path: polygon(0% 0%, 100% 0, 100% 75%, 50% 100%, 0 75%);
+    clip-path: polygon(0% 0%, 100% 0, 100% 80%, 50% 100%, 0 80%);
 }
 .dark_layer{
     background: #220546ad;
