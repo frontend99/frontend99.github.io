@@ -252,6 +252,13 @@ html,body{width: 100%; height: 100%;}
     height: 60px;
     margin: 0;
     box-shadow: 0px 0px 2px 1px rgb(255, 255, 255);
+    opacity: 0;
+    animation: menu_nav 1s forwards;
+    animation-delay: 4s;
+}
+@-webkit-keyframes menu_nav{
+    from{transform: translateY(-30%); opacity: 0;}
+    to{transform: translateY(0%); opacity: 1;}
 }
 
 .menu .navbar-brand {
@@ -281,6 +288,11 @@ html,body{width: 100%; height: 100%;}
     font-weight: 500;
     color: white;
     line-height: 45px;
+    transition: 0.3s;
+}
+.menu nav.navbar.fixed-top.navbar-expand-lg.navbar-light div ul li a.nav-link:hover{
+    transform: scale(1.2);
+    transition: 0.3s;
 }
 .menu nav.scroll_nav{
     background: white;
@@ -323,25 +335,52 @@ header{
     color: white;
     font-size: 22px;
     margin-bottom: 10px;
+    opacity: 0;
+    animation: header_name 1s forwards;
+    animation-delay: 5.5s;
+}
+@-webkit-keyframes header_name{
+    from{transform: translateY(-50%); opacity: 0;}
+    to{transform: translateY(0%); opacity: 1;}
 }
 .header_left .developer{
     color: white;
     font-weight: 600;
     font-size: 55px;
     margin-bottom: 10px;
+    opacity: 0;
+    animation: header_developer 1.5s forwards;
+    animation-delay: 6s;
+}
+@-webkit-keyframes header_developer{
+    from{transform: translateX(-50%); opacity: 0;}
+    to{transform: translateX(0%); opacity: 1;}
 }
 .header_left .job{
     color: white;
     font-size: 22px;
     text-align: justify;
     padding-right: 55px;
+    opacity: 0;
+    animation: header_developer 1.5s forwards;
+    animation-delay: 6s;
+}
+@-webkit-keyframes header_job{
+    from{transform: translateX(50%); opacity: 0;}
+    to{transform: translateX(0%); opacity: 1;}
 }
 .header_left .view_more{
     margin-top: 30px;
     border-radius: 20px;
     font-weight: 500;
+    opacity: 0;
+    animation: header_viewmore 1s forwards;
+    animation-delay: 7s;
 }
-
+@-webkit-keyframes header_viewmore{
+    from{transform: translateY(-50%); opacity: 0;}
+    to{transform: translateY(0%); opacity: 1;}
+}
 .header_left .view_more:hover {
     background: white;
     color: #28A745;
@@ -351,9 +390,14 @@ header{
     margin-left: 35px;
     border-radius: 20px;
     font-weight: 500;
+    opacity: 0;
+    animation: header_viewmore 1s forwards;
+    animation-delay: 7s;
+    color: white;
+    background-color: #f5a515;
 }
 .header_left .contact_me:hover {
-    color: #007bff;
+    color: #f5a515;
     background: white;
 }
 .header_left b{
@@ -367,12 +411,17 @@ header{
     z-index: 2;
     top: 25%;
     left: 65%;
+    opacity: 0;
+    animation: scale_img_web 1.5s forwards;
+    animation-delay: 4s;
 }
 .header_right img{
     width: 100%;
-    transition: 1.5s;
 }
-
+@-webkit-keyframes scale_img_web{
+    from{transform: scale(0) rotate(0deg) ; opacity: 0;}
+    to{transform: scale(1) rotate(360deg); opacity: 1;}
+}
 /*end css header*/
 
 /*css about me*/
@@ -389,13 +438,13 @@ header{
 .about .col-sm-6{
     margin: 0;
     padding: 0;
-    opacity: 0;
 }
 .about h1{
     margin-top: 60px;
     margin-bottom: 25px;
     text-shadow: 1px 2px 2px rgba(150, 150, 150, 1);
     font-weight: bold;
+    color: red;
 }
 .about img{
     width: 57%;
@@ -424,16 +473,6 @@ header{
 .about_info p{
     width: 50%;
     float: left;
-}
-.about .col-sm-6 a{
-    border-radius: 20px;
-    font-weight: 500;
-    margin-left: -100px;
-}
-
-.about .col-sm-6 a:hover {
-    color: #c82333;
-    background: white;
 }
 .about .container{padding: 0;}
 .appear_aboutLeft{animation: appear_about_left 1.5s forwards;}
@@ -488,10 +527,25 @@ header{
     from{
         transform: scale(0);
         opacity: 0;
+        visibility: hidden;
     }
     to{
         transform: scale(1);
         opacity: 1;
+        visibility: visible;
+    }
+}
+.hide_backtotop{animation: hide_back_to_top 1s forwards;}
+@-webkit-keyframes hide_back_to_top{
+    from{
+        transform: scale(1);
+        opacity: 1;
+        visibility: visible;
+    }
+    to{
+        transform: scale(0);
+        opacity: 0;
+        visibility: hidden;
     }
 }
 /*end css back to top*/
@@ -558,7 +612,7 @@ header{
 }
 .one_exp i{
     font-size: 55px;
-    color: #3E43E9;
+    color: #bb0b19;
     margin-left: 35%;
     margin-top: 12%;
 }
@@ -572,17 +626,7 @@ header{
     text-align: center;
     font-size: 15px;
 }
-.one_exp .view_more{
-    width: 100%;
-    height: 100%;
-    background: #111221b8;
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    opacity: 0;
-}
-.one_exp:hover .view_more{opacity: 1;}
+
 .see{
     margin: 40% 25%;
     background: #ffffff;
@@ -607,19 +651,9 @@ header{
     width: 100%;
     height: 650px;
 }
-.skill .container .all_skill div.scale_oneSkill{animation: scale_one_skill 1s forwards;}
-@-webkit-keyframes scale_one_skill{
-    from{
-        opacity: 0;
-        transform: scale(0);
-    }
-    to{
-        opacity: 1;
-        transform: scale(1);
-    }
-}
 .skill .container{padding: 0;}
 .skill h1{
+    color: #5a0e92;
     font-weight: bold;
     padding-top: 100px;
     text-align: center;
@@ -636,7 +670,6 @@ header{
     width: 30%;
     margin-bottom: 35px;
     box-shadow: 0px 0px 6px 0px rgba(0,0,0,0.25);
-    opacity: 0;
 }
 .one_skill .item{
     width: 40px;
@@ -672,15 +705,15 @@ header{
 /*css more*/
 .more{
     width: 100%;
-    height: 700px;
-    background: url(https://vectormienphi.com/wp-content/uploads/2018/12/psd-5479.jpg) center center;
+    height: 750px;
+    background: url(https://i.pinimg.com/originals/58/a9/a4/58a9a41b296ee3a5eb7c98ad97c9ddcd.jpg) center center;
     background-size: cover;
     margin-top: 50px;
     opacity: 0;
     clip-path: polygon(100% 85%, 50% 100%, 0 85%, 0 0, 50% 14%, 100% 0);
 }
 .bg_more{
-    background: #000000a8;
+    background: #000000c7;
     width: 100%;
     height: 100%;
 }
@@ -699,7 +732,7 @@ header{
 }
 .more .col-sm-6{
     padding: 50px;
-    margin-top: 180px;
+    margin-top: 200px;
 }
 .more .col-sm-6:nth-child(1) {border-right: 2px solid white;}
 .more .left i{
@@ -726,10 +759,10 @@ header{
     margin-bottom: 80px;
     color: white;
 }
-.appear_more{animation: appear_More 1.5s forwards;}
+.appear_more{animation: appear_More 1s forwards;}
 @-webkit-keyframes appear_More{
-    from{opacity: 0;}
-    to{opacity: 1;}
+    from{opacity: 0; transform: scale(0.8)}
+    to{opacity: 1;transform: scale(1)}
 }
 /*end css more*/
 
@@ -740,6 +773,7 @@ header{
     margin-top: 50px;
 }
 .project h1{
+    color: #239e1c;
     text-transform: uppercase;
     text-align: center;
     margin-bottom: 30px;
@@ -783,20 +817,10 @@ header{
     position: relative;
     height: 230px;
     overflow: hidden;
-    opacity: 0;
+    opacity: 1;
     transition: 2s;
 }
-.scale_oneProject{animation: scale_one_project 1s forwards;}
-@-webkit-keyframes scale_one_project{
-    from{
-        opacity: 0;
-        transform: scale(0);
-    }
-    to{
-        opacity: 1;
-        transform: scale(1);
-    }
-}
+
 .one_project:hover .content {
     opacity: 1;
     transition: 0.7s;
@@ -862,65 +886,87 @@ header{
 
 /*css contact*/
 .contact{
+    background: #e2e1e1;
     width: 100%;
     height: 730px;
-    background: #D6D5D5;
-    opacity: 0;
     clip-path: polygon(100% 100%, 50% 100%, 0 100%, 0 0, 50% 16%, 100% 0);
 }
 .appear_contact{animation: appear_Contact 1.5s forwards;}
 @-webkit-keyframes appear_Contact{
-    from{opacity: 0;}
-    to{opacity: 1;}
+    from{opacity: 0; transform: scale(0.8);}
+    to{opacity: 1;transform: scale(1);}
 }
 .contact .container{
     padding: 0;
     padding-top: 180px;
 }
 .contact h1{
+    color: #8a0a15;
     text-transform: uppercase;
-    margin-bottom: 40px;
-    font-weight: bold;
     text-align: center;
-    margin-top: 40px;
+    margin-bottom: 50px;
+    font-weight: bold;
     text-shadow: 1px 2px 2px rgba(150, 150, 150, 1);
 }
 .contact .row{
     padding: 0;
-    width: 100%;
-    margin: 0;
+    width: 60%;
+    margin: auto;
+    margin-top: 50px;
 }
-.contact .col-sm-5{padding: 0 50px;}
-.contact .col-sm-7{padding: 0;}
 .one_contact{
-    margin-bottom: 25px;
-    margin-left: 40px;
-    width: 100%;
-}
-.one_contact:hover p {
-    transform: translateX(45px) scale(1.3);
-    color: #ce0000;
-}
-.one_contact:hover i {
-    transform: scale(1.3);
-    color: #ce0000;
-    transition: 0.2s;
+    width: 33.33%;
+    height: 100%;
 }
 .one_contact i{
     float: left;
-    font-size: 25px;
-    color: #09128c;
-    transition: 0.5s;
+    font-size: 50px;
+    display: block;
 }
-.one_contact p{
-    transition: 0.2s;
+.contact i.fas.fa-envelope {
+    margin-right: 10px;
+}
+.contact i.fab.fa-facebook-f {
+    color: #214896;
+}
+
+.contact i.fas.fa-phone-volume {
+    margin-right: 10px;
+    color: #326917;
+}
+.one_contact .notice{
+    margin-left: 40px;
+}
+.one_contact a{
+    margin-top: -17px;
+    display: block;
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
     font-weight: 500;
-    padding-left: 40px;
-    cursor: pointer;
 }
-.thanks{
+
+.one_contact a:hover {
+    color: red;
+}
+.one_contact .notice p{font-weight: bold;font-size: 20px;}
+.contact .fb-comments{
+    background: white;
     width: 100%;
-    box-shadow: 0px 0px 8px 0px rgba(0,0,0,0.5);
+    margin: auto;
+}
+.contact .col-sm-8{
+    margin: auto;
+    background-color: white;
+}
+.contact .fb{
+    color: #214896;
+}
+.contact .phone{
+    color: #326917;
+}
+.contact .email{
+    color: #650c88;
 }
 /*end css contact*/
 
@@ -929,7 +975,6 @@ footer{
     width: 100%;
     height: 100px;
     background: #414141;
-    opacity: 0;
 }
 footer p{
     text-align: center;

@@ -49,10 +49,7 @@
 				scrollStatus = 'smaller100';
 			}
 		}
-		if(window.pageYOffset > (aboutLeft.offsetTop - 350)){
-			aboutLeft.classList.add('appear_aboutLeft');
-			aboutRight.classList.add('appear_aboutRight');
-		}
+		
 		if(window.pageYOffset > (aboutLeft.offsetTop - 150)){
 			nav_li[0].classList.remove('border_li');
 			nav_li[1].classList.add('border_li');
@@ -75,20 +72,18 @@
 		if(window.pageYOffset > 500){
 			if(backToTopStatus == 'ok'){
 				backToTop.classList.add('appear_backtotop');
+				backToTop.classList.remove('hide_backtotop');
 				backToTopStatus = 'no';
 			}
 		}
 		else if(window.pageYOffset < 500){
 			if(backToTopStatus == 'no'){
+				backToTop.classList.add('hide_backtotop');
 				backToTop.classList.remove('appear_backtotop');
 				backToTopStatus = 'ok';
 			}
 		}
-		if(window.pageYOffset > (skill.offsetTop - 350)){
-			for(var i=0;i<oneSkill.length;i++){
-				oneSkill[i].classList.add('scale_oneSkill');
-			}
-		}
+		
 		if(window.pageYOffset > (skill.offsetTop - 150)){
 			nav_li[2].classList.remove('border_li');
 			nav_li[3].classList.add('border_li');
@@ -104,14 +99,8 @@
 			nav_li[3].classList.remove('border_li');
 			nav_li[4].classList.add('border_li');
 		}
-		if(window.pageYOffset > (skill.offsetTop - 300) && window.pageYOffset < (more.offsetTop - 300)){
-			nav_li[3].classList.add('border_li');
+		if(window.pageYOffset < (more.offsetTop - 150)){
 			nav_li[4].classList.remove('border_li');
-		}
-		if(window.pageYOffset > (project.offsetTop - 350)){
-			for(var i=0;i<oneProject.length;i++){
-				oneProject[i].classList.add('scale_oneProject');
-			}
 		}
 		if(window.pageYOffset > (project.offsetTop - 150)){
 			nav_li[4].classList.remove('border_li');
@@ -120,12 +109,6 @@
 		if(window.pageYOffset > (more.offsetTop - 300) && window.pageYOffset < (project.offsetTop - 300)){
 			nav_li[4].classList.add('border_li');
 			nav_li[5].classList.remove('border_li');
-		}
-		if(window.pageYOffset > (contact.offsetTop - 350)){
-			contact.classList.add('appear_contact');
-		}
-		if(window.pageYOffset > (contact.offsetTop - 50)){
-			footer.classList.add('appear_contact');
 		}
 		if(window.pageYOffset > (contact.offsetTop - 150)){
 			nav_li[5].classList.remove('border_li');
