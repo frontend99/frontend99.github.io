@@ -1,0 +1,53 @@
+/*Style CSS
+Code by Proton*/
+*{margin: 0; padding: 0; font-family: 'Roboto', sans-serif;}
+html,body{width: 100%; height: 100%;}
+nav{
+    width: 100%;
+    height: 50px;
+    background:#d8d8d8;
+}
+.home{
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 40px;
+    margin-left: 100px;
+}
+nav .button{
+    float: right;
+    padding: 5px;
+}
+nav button{
+    cursor: pointer;
+}
+.content{
+    height: 470px;
+}
+footer{
+    padding: 20px;
+}
+.col-sm-5{
+    margin: auto;
+}
+.sign-up-ok .col-sm-6{
+    margin: auto;
+}
+.sign-up-ok{
+    display: none;
+}
+.forgot-ok{
+    display: none;
+}
+.sign-up-ok span{
+    color: red;
+    font-weight: bold;
+}
+.forgot-ok .col-sm-6{
+    margin: auto;
+}
+nav i{
+    font-size: 25px;
+    cursor: pointer;
+}
