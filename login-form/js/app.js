@@ -22,6 +22,10 @@
                 alert('Bạn chưa nhập đủ thông tin');
                 return false;
             }
+            else if(passIn.value.length < 6){
+            	alert('Mật khẩu phải lơn hơn 6 ký tự');
+            	return false;
+            }
             else{
                 divRight.classList.remove('display');
                 divRight.classList.add('hiden');
@@ -34,6 +38,10 @@
             if(emailUp.value == "" || passUp.value == "" || repassUp.value == "" || phoneUp.value == ""){
                 alert('Bạn chưa nhập đủ thông tin');
                 return false;
+            }
+            else if(passUp.value.length < 6 || repassUp.value.length <6){
+            	alert('Mật khẩu phải lơn hơn 6 ký tự');
+            	return false;
             }
             else if(passUp.value != repassUp.value){
                 alert("Nhập lại mật khẩu không đúng");
