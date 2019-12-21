@@ -5,7 +5,7 @@ $(document).ready(function() {
 	   		$('.preloader').fadeOut('fast');
 		}, 3000);
 	});
-
+	
 	$('nav li:nth-child(1) a').on('click', function(event) {
 		event.preventDefault();
 		/* Act on the event */
