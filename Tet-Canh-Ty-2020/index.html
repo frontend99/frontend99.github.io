@@ -32,11 +32,11 @@
         function flakeFall() {
         if( !getRefToDivNest('snFlkDiv0') ) { return; }
         var scrWidth = 0, scrHeight = 0, scrollHeight = 0, scrollWidth = 0;
-        if( typeof( window.innerWidth ) == 'number' ) { scrWidth = window.innerWidth; scrHeight = window.innerHeight; } else {
+        if( typeof( window.innerWidth ) == 'number' ) { scrWidth = window.innerWidth; scrHeight = window.innerHeight -20; } else {
         if( document.documentElement && (document.documentElement.clientWidth ||document.documentElement.clientHeight ) ) {
-        scrWidth = document.documentElement.clientWidth; scrHeight = document.documentElement.clientHeight; } else {
+        scrWidth = document.documentElement.clientWidth; scrHeight = document.documentElement.clientHeight -20; } else {
         if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
-        scrWidth = document.body.clientWidth; scrHeight = document.body.clientHeight; } } }
+        scrWidth = document.body.clientWidth; scrHeight = document.body.clientHeight -20; } } }
         if( typeof( window.pageYOffset ) == 'number' ) { scrollHeight = pageYOffset; scrollWidth = pageXOffset; } else {
         if( document.body && ( document.body.scrollLeft ||document.body.scrollTop ) ) { scrollHeight = document.body.scrollTop;scrollWidth = document.body.scrollLeft; } else {
         if(document.documentElement && (document.documentElement.scrollLeft ||document.documentElement.scrollTop ) ) { scrollHeight =document.documentElement.scrollTop; scrollWidth =document.documentElement.scrollLeft; } }

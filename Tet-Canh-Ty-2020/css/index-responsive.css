@@ -42,6 +42,7 @@ Code by Proton*/
         justify-content: space-around;
         margin: auto;
         position: relative;
+        display: none;
     }
     .time{
         width: 85%;
@@ -150,6 +151,7 @@ Code by Proton*/
         justify-content: space-around;
         margin: auto;
         position: relative;
+        display: none;
     }
     .time{
         width: 85%;
@@ -230,6 +232,7 @@ Code by Proton*/
         opacity: 0.8;
         margin-left: 1%;
     }
+    .phaotet{display: none;}
     .phaotet1{left: 15%;}
     .phaotet2{left: 37%;}
     .phaotet3{left: 59%;}
@@ -278,6 +281,7 @@ Code by Proton*/
         justify-content: space-around;
         margin: auto;
         position: relative;
+        display: none;
     }
     .time{
         width: 85%;
