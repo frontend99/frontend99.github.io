@@ -21,7 +21,15 @@ table, tr, td{
     border: 2px solid #86159e;
 }
 td{width: 33.33%;text-align: center;}
+
+td:hover {
+    background: #acf9f4;
+}
 .one-content{font-size: 22px;color: #ce2525;font-weight: bold;}
+
+a.one-content:hover {
+    color: #ce2525;
+}
 .contact{
     margin-top: 7%;
     height: 10%;
