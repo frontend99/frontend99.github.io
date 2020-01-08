@@ -1,0 +1,116 @@
+/*Style CSS
+Code by Proton*/
+@font-face{
+    src: url(../fonts/Nunito-Black.ttf);
+    font-family: Nunito-Black;
+}
+@font-face{
+    src: url(../fonts/Nunito-Bold.ttf);
+    font-family: Nunito-Bold;
+}
+*{margin: 0; padding: 0;}
+html,body{width: 100%; height: 100vh;}
+.count-down{
+    width: 100%;
+    height: 100vh;
+    background: url(../images/background.png) center center;
+    background-size: cover;
+    overflow: hidden;
+}
+.top{
+    width: 50%;
+    height: 35%;
+    margin: 0 auto;
+}
+.top-img-1{
+    margin-left: 9%;
+    margin-right: 2%;
+}
+.chuot{width: 15%;}
+.so2020{
+    width: 12%;
+    position: relative;
+    top: -10%;
+    -webkit-animation: up2 1.2s ease-in-out 3s infinite alternate;
+}
+.top-img-2{animation-delay: 0.4s;}
+@-webkit-keyframes up2{
+    to {top: -15%;}
+}
+.top-img-3{animation-delay: 0.8s;}
+.top-img-4{animation-delay: 1.2s;}
+.top-img-5{animation-delay: 1.6s;}
+.center{
+    width: 100%;
+    height: 30%;
+}
+.phaotet{
+    width: 50%;
+    height: 46%;
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+    position: relative;
+    display: none;
+}
+.time{
+    width: 50%;
+    height: 54%;
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+}
+.one-time{
+    width: 100px;
+    height: 100%;
+}
+.one-time p{
+    display: block;
+    width: 100%;
+    text-align: center;
+    height: 50px;
+    line-height: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Nunito-Black;
+}
+.one-time b{
+    color: #ce2525;
+    font-size: 60px;
+    display: block;
+    border: 3px solid #d02525;
+    border-radius: 50%;
+    text-align: center;
+    width: 100%;
+    height: 100px;
+    line-height: 100px;
+    text-shadow: 3px 1px 5px #474747;
+    font-family: Nunito-Bold;
+}
+.phaotet img{
+    height: 85%;
+    width: auto;
+    position: absolute;
+    top: -7%;
+    opacity: 0.8;
+}
+.phaotet1{left: 15%;}
+.phaotet2{left: 37%;}
+.phaotet3{left: 59%;}
+.phaotet4{left: 81%;}
+.cd{
+    width: 50px;   
+    height: 50px;
+    z-index: 6;
+}
+.bot{
+    width: 80%;
+    height: 35%;
+    margin: auto;
+}
+.chuctet{width: 30%;}
+.bot-img-2{
+    width: 15%;
+    margin-left: 13.5%; 
+}
+.bot-img-3{margin-left: 10.5%;}

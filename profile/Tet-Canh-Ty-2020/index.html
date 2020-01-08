@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="vi"><head>
+    <title>Tết Canh Tý 2020</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/index-responsive.css">
+    
+    <script type='text/javascript'>
+        var pictureSrc ="images/hoa-dao-roi.png"; 
+        var pictureWidth = 25; 
+        var pictureHeight = 25;
+        var numFlakes = 10;
+        var downSpeed = 0.005;
+        var lrFlakes = 5;
+        if( typeof( numFlakes ) != 'number' || Math.round( numFlakes ) != numFlakes || numFlakes < 1 ) { numFlakes = 10; }
+        for( var x = 0; x < numFlakes; x++ ) {
+        if( document.layers ) { 
+        document.write('<layer id="snFlkDiv'+x+'"><imgsrc="'+pictureSrc+'" height="'+pictureHeight+'"width="'+pictureWidth+'" alt="*" border="0"></layer>');
+        } else {
+        document.write('<div style="position:absolute; z-index:9999;"id="snFlkDiv'+x+'"><img src="'+pictureSrc+'"height="'+pictureHeight+'" width="'+pictureWidth+'" alt="*"border="0"></div>');
+        }
+        }
+        var xcoords = new Array(), ycoords = new Array(), snFlkTemp;
+        for( var x = 0; x < numFlakes; x++ ) {
+        xcoords[x] = ( x + 1 ) / ( numFlakes + 1 );
+        do { snFlkTemp = Math.round( ( numFlakes - 1 ) * Math.random() );
+        } while( typeof( ycoords[snFlkTemp] ) == 'number' );
+        ycoords[snFlkTemp] = x / numFlakes;
+        }
+        function flakeFall() {
+        if( !getRefToDivNest('snFlkDiv0') ) { return; }
+        var scrWidth = 0, scrHeight = 0, scrollHeight = 0, scrollWidth = 0;
+        if( typeof( window.innerWidth ) == 'number' ) { scrWidth = window.innerWidth; scrHeight = window.innerHeight -20; } else {
+        if( document.documentElement && (document.documentElement.clientWidth ||document.documentElement.clientHeight ) ) {
+        scrWidth = document.documentElement.clientWidth; scrHeight = document.documentElement.clientHeight -20; } else {
+        if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
+        scrWidth = document.body.clientWidth; scrHeight = document.body.clientHeight -20; } } }
+        if( typeof( window.pageYOffset ) == 'number' ) { scrollHeight = pageYOffset; scrollWidth = pageXOffset; } else {
+        if( document.body && ( document.body.scrollLeft ||document.body.scrollTop ) ) { scrollHeight = document.body.scrollTop;scrollWidth = document.body.scrollLeft; } else {
+        if(document.documentElement && (document.documentElement.scrollLeft ||document.documentElement.scrollTop ) ) { scrollHeight =document.documentElement.scrollTop; scrollWidth =document.documentElement.scrollLeft; } }
+        }
+        for( var x = 0; x < numFlakes; x++ ) {
+        if( ycoords[x] * scrHeight > scrHeight - pictureHeight ) { ycoords[x] = 0; }
+        var divRef = getRefToDivNest('snFlkDiv'+x); if( !divRef ) { return; }
+        if( divRef.style ) { divRef = divRef.style; } var oPix = document.childNodes ? 'px' : 0;
+        divRef.top = ( Math.round( ycoords[x] * scrHeight ) + scrollHeight ) + oPix;
+        divRef.left = ( Math.round( ( ( xcoords[x] * scrWidth ) - (pictureWidth / 2 ) ) + ( ( scrWidth / ( ( numFlakes + 1 ) * 4 ) ) * (Math.sin( lrFlakes * ycoords[x] ) - Math.sin( 3 * lrFlakes * ycoords[x]) ) ) ) + scrollWidth ) + oPix;
+        ycoords[x] += downSpeed;
+        }
+        }
+        function getRefToDivNest(divName) {
+        if( document.layers ) { return document.layers[divName]; }
+        if( document[divName] ) { return document[divName]; }
+        if( document.getElementById ) { return document.getElementById(divName); } 
+        if( document.all ) { return document.all[divName]; } 
+        return false;
+        }
+        window.setInterval('flakeFall();',100);
+        </script> 
+</head>
+<body>
+    <div class="count-down">
+        <div class="top">
+            <img src="images/chuot-trai2.png"  class="top-img-1 chuot">
+            <img src="images/2.png" class="top-img-2 so2020">
+            <img src="images/20.png" class="top-img-3 so2020">
+            <img src="images/202.png" class="top-img-4 so2020">
+            <img src="images/2020.png" class="top-img-5 so2020">
+            <img src="images/chuot-phai2.png" class="top-img-6 chuot">
+        </div> <!-- end top -->
+        <div class="center">
+            <div class="time">
+                <div class="one-time">
+                    <p>Ngày</p>
+                    <b id="ngay" class="cd"></b>
+                </div>
+                <div class="one-time">
+                    <p>Giờ</p>
+                    <b id="gio" class="cd"></b>
+                </div>
+                <div class="one-time">
+                    <p>Phút</p>
+                    <b id="phut" class="cd"></b>
+                </div>
+                <div class="one-time">
+                    <p>Giây</p>
+                    <b id="giay" class="cd"></b>
+                </div>
+            </div> <!-- end time -->
+            <div class="phaotet">
+                <img src="images/phao-tet.png" class="phaotet1">
+                <img src="images/phao-tet.png" class="phaotet2">
+                <img src="images/phao-tet.png" class="phaotet3">
+                <img src="images/phao-tet.png" class="phaotet4">
+            </div> <!-- end phao tet -->
+        </div> <!-- end center -->
+        <div class="bot">
+            <img src="images/chuc-tet-1.png" class="bot-img-1 chuctet">
+            <img src="images/banh-chung.png" class="bot-img-2">
+            <img src="images/chuc-tet-2.png" class="bot-img-3 chuctet">
+            <iframe src="https://www.nhaccuatui.com/mh/auto/TF3hoTIkngzv" width="0" height="0" frameborder="0" allowfullscreen allow="autoplay"></iframe>
+        </div> <!-- end bot -->
+    </div> <!-- end coudown -->
+	<script type="text/javascript" src="js/app.js" ></script>
+</body>
+</html>
