@@ -1,2 +1,64 @@
 /*Media Queries
 Code by Proton*/
+@media (max-width: 576px){
+    .proton{
+        background: url(../images/background2.jpg) center center;
+        padding-top: 30%;
+    }
+    table{
+    height: 50%;
+}
+    .contact .row{
+    width: 70%;
+    margin-top: 11%;
+}
+    .one_contact{
+    height: 70%;
+    width: 100%;
+    margin-left: 20%;
+}
+    .one_contact i{font-size: 25px;}
+    .contact i.fab.fa-facebook-f{
+    margin: 0 9px;
+}
+    .contact i.fas.fa-phone-volume{margin: 0 8px;}
+    .one-content{font-size: 15px;}
+    footer{
+    margin-top: 27%;
+}
+}
+@media only screen and (min-device-width : 768px) and (max-device-width : 991px){
+    .proton{
+        background: url(../images/background3.jpg) center center;
+        padding-top: 35%;
+    }
+    table{
+        width: 70%;
+        height: 40%;
+    }
+    .contact .row{
+    width: 80%;
+    margin-top: 15%;
+}
+}
+@media only screen and (min-device-width : 992px) and (max-device-width : 1900px){
+    .proton{
+        background: url(../images/background4.jpg) center center;
+    }
+    table{width: 70%;}
+    .contact .row{width: 50%;}
+}
+@media only screen and (min-device-width : 577px) and (max-device-width : 767px){
+    .proton{
+        background: url(../images/background5.jpg) center center;
+        padding-top: 30%;
+    }
+    table{
+    width: 70%;
+    height: 50%;
+}
+    .contact .row{
+    width: 92%;
+    margin-top: 10%;
+}
+}

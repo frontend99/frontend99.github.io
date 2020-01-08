@@ -4,7 +4,7 @@ Code by Proton*/
     .count-down{
         width: 100%;
         height: 100vh;
-        background: url(../images/background2.png) center center;
+        background: url(../images/background2.jpg) center center;
         background-size: cover;
         overflow: hidden;
     }
@@ -113,7 +113,7 @@ Code by Proton*/
     .count-down{
         width: 100%;
         height: 100vh;
-        background: url(../images/background3.png) center center;
+        background: url(../images/background3.jpg) center center;
         background-size: cover;
         overflow: hidden;
     }
@@ -220,7 +220,7 @@ Code by Proton*/
     .count-down{
         width: 100%;
         height: 100vh;
-        background: url(../images/background4.png) center center;
+        background: url(../images/background4.jpg) center center;
         background-size: cover;
         overflow: hidden;
     }
@@ -242,7 +242,7 @@ Code by Proton*/
     .count-down{
         width: 100%;
         height: 100vh;
-        background: url(../images/background5.png) center center;
+        background: url(../images/background5.jpg) center center;
         background-size: cover;
         overflow: hidden;
     }
