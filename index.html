@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi"><head>
-    <title>Nguyễn Hồng Đức</title>
+    <title>SPA - Home</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">  
     <link rel="stylesheet" href="vendor/bootstrap.css">
@@ -9,99 +9,64 @@
     <link rel="stylesheet" href="css/index-responsive.css">
 	<link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900&display=swap&subset=vietnamese" rel="stylesheet">
     <link rel="shortcut icon" type="image/png" href="images/favicon.png"/>
-    <script type='text/javascript'>
-        var pictureSrc ="images/hoa-dao-roi.png"; 
-        var pictureWidth = 25; 
-        var pictureHeight = 25;
-        var numFlakes = 10;
-        var downSpeed = 0.005;
-        var lrFlakes = 5;
-        if( typeof( numFlakes ) != 'number' || Math.round( numFlakes ) != numFlakes || numFlakes < 1 ) { numFlakes = 10; }
-        for( var x = 0; x < numFlakes; x++ ) {
-        if( document.layers ) { 
-        document.write('<layer id="snFlkDiv'+x+'"><imgsrc="'+pictureSrc+'" height="'+pictureHeight+'"width="'+pictureWidth+'" alt="*" border="0"></layer>');
-        } else {
-        document.write('<div style="position:absolute; z-index:9999;"id="snFlkDiv'+x+'"><img src="'+pictureSrc+'"height="'+pictureHeight+'" width="'+pictureWidth+'" alt="*"border="0"></div>');
-        }
-        }
-        var xcoords = new Array(), ycoords = new Array(), snFlkTemp;
-        for( var x = 0; x < numFlakes; x++ ) {
-        xcoords[x] = ( x + 1 ) / ( numFlakes + 1 );
-        do { snFlkTemp = Math.round( ( numFlakes - 1 ) * Math.random() );
-        } while( typeof( ycoords[snFlkTemp] ) == 'number' );
-        ycoords[snFlkTemp] = x / numFlakes;
-        }
-        function flakeFall() {
-        if( !getRefToDivNest('snFlkDiv0') ) { return; }
-        var scrWidth = 0, scrHeight = 0, scrollHeight = 0, scrollWidth = 0;
-        if( typeof( window.innerWidth ) == 'number' ) { scrWidth = window.innerWidth; scrHeight = window.innerHeight -30; } else {
-        if( document.documentElement && (document.documentElement.clientWidth ||document.documentElement.clientHeight ) ) {
-        scrWidth = document.documentElement.clientWidth; scrHeight = document.documentElement.clientHeight -30; } else {
-        if( document.body && ( document.body.clientWidth || document.body.clientHeight ) ) {
-        scrWidth = document.body.clientWidth; scrHeight = document.body.clientHeight -30; } } }
-        if( typeof( window.pageYOffset ) == 'number' ) { scrollHeight = pageYOffset; scrollWidth = pageXOffset; } else {
-        if( document.body && ( document.body.scrollLeft ||document.body.scrollTop ) ) { scrollHeight = document.body.scrollTop;scrollWidth = document.body.scrollLeft; } else {
-        if(document.documentElement && (document.documentElement.scrollLeft ||document.documentElement.scrollTop ) ) { scrollHeight =document.documentElement.scrollTop; scrollWidth =document.documentElement.scrollLeft; } }
-        }
-        for( var x = 0; x < numFlakes; x++ ) {
-        if( ycoords[x] * scrHeight > scrHeight - pictureHeight ) { ycoords[x] = 0; }
-        var divRef = getRefToDivNest('snFlkDiv'+x); if( !divRef ) { return; }
-        if( divRef.style ) { divRef = divRef.style; } var oPix = document.childNodes ? 'px' : 0;
-        divRef.top = ( Math.round( ycoords[x] * scrHeight ) + scrollHeight ) + oPix;
-        divRef.left = ( Math.round( ( ( xcoords[x] * scrWidth ) - (pictureWidth / 2 ) ) + ( ( scrWidth / ( ( numFlakes + 1 ) * 4 ) ) * (Math.sin( lrFlakes * ycoords[x] ) - Math.sin( 3 * lrFlakes * ycoords[x]) ) ) ) + scrollWidth ) + oPix;
-        ycoords[x] += downSpeed;
-        }
-        }
-        function getRefToDivNest(divName) {
-        if( document.layers ) { return document.layers[divName]; }
-        if( document[divName] ) { return document[divName]; }
-        if( document.getElementById ) { return document.getElementById(divName); } 
-        if( document.all ) { return document.all[divName]; } 
-        return false;
-        }
-        window.setInterval('flakeFall();',100);
-    </script> 
+
 </head>
 <body>
-    <div class="proton">
-        <iframe src="https://www.nhaccuatui.com/mh/auto/TF3hoTIkngzv" width="0" height="0" frameborder="0" allowfullscreen allow="autoplay"></iframe>
-        <table border="1">
-            <tbody>
-                <tr>
-                    <td><a href="https://frontend99.github.io/profile" class="one-content" target="_blank">Hồ sơ cá nhân của tôi</a></td>
-                    <td><a href="https://frontend99.github.io/profile/Tet-Canh-Ty-2020" class="one-content" target="_blank">Countdown Tết 2020</a></td>
-                    <td><a href="https://drive.google.com/open?id=1C6tpqI6Fyc0oPfxiAQC3z2xzduIH_DMR" class="one-content" target="_blank">Ảnh nền máy tính Tết 2020</a></td>
-                </tr>
-                <tr>
-                    <td><a href="https://drive.google.com/open?id=1yyebmRnxdoGhlcSx-8m8L9Hl6Pk7i4eU" class="one-content" target="_blank">Code BTVN Lập trình web</a></td>
-                    <td><a href="#" class="one-content" target="_blank">Bài tập lớn Android</a></td>
-                    <td><a href="#" class="one-content" target="_blank">Bài tập lớn ASP.NET</a></td>
-                </tr>
-            </tbody>
-        </table>
-        <div class="contact">
-            <div class="row">
-                <div class="one_contact">
-                    <i class="fab fa-facebook-f"></i>
-                    <a href="https://www.facebook.com/ducnh99" target="_blank">Nguyễn Đức</a>
-                </div><!-- end 1 contact -->
-                <div class="one_contact">
-                    <i class="fas fa-phone-volume"></i>
-                    <a href="#">0389.755.202</a>
-                </div><!-- end 1 contact -->
-                <div class="one_contact">
-                    <i class="fas fa-envelope"></i>
-                    <a href="mailto:autoclickvn@gmail.com">autoclickvn@gmail.com</a>
-                </div><!-- end 1 contact -->
-            </div> <!-- end row -->
-        </div> <!-- end contact -->
-    
-        <footer>
-            <h6>© Proton 2019-2020</h6>
-        </footer>
+    <div class="all">
+        <div class="bg-all">
+            <h3>Hello, I'm Đức - Welcome to my website !</h3>
+            <div class="press">
+                <div class="crossbar"></div>
+                <div class="btn-press">
+                    <p class="pClick">Click</p>
+                </div>
+            </div> <!-- end button press -->
+            <div class="content">
+                <div class="content-circle">
+                    <div class="content-circle-small"></div>
+                    <div class="divingbar divingbar-1">
+                        <div class="content-diving-1">
+                            <i class="fas fa-images icon-1"></i>
+                            <a class="link-1" href="https://drive.google.com/open?id=1C6tpqI6Fyc0oPfxiAQC3z2xzduIH_DMR" target="_blank">desktop <br> background <br>Tết <br>2020</a>
+                        </div>
+                    </div>
+                    <div class="divingbar divingbar-2">
+                        <div class="content-diving-2">
+                            <i class="fas fa-hat-wizard icon-2"></i>
+                            <a class="link-2" href="https://frontend99.github.io/profile/Tet-Canh-Ty-2020" target="_blank">CountDown <br> Tết <br> 2020</a>
+                        </div>
+                    </div>
+                    <div class="divingbar divingbar-3">
+                        <div class="content-diving-3">
+                            <i class="fas fa-address-card icon-3"></i>
+                            <a class="link-3" href="https://frontend99.github.io/profile" target="_blank">My profile</a>
+                        </div>
+                    </div>
+                    <div class="divingbar divingbar-4">
+                        <div class="content-diving-4">
+                            <i class="fas fa-globe-americas icon-4"></i>
+                            <a class="link-4" href="https://drive.google.com/open?id=1yyebmRnxdoGhlcSx-8m8L9Hl6Pk7i4eU" target="_blank">Web <br> Homework</a>
+                        </div>
+                    </div>
+                    <div class="divingbar divingbar-5">
+                        <div class="content-diving-5">
+                            <i class="fab fa-facebook-square icon-5"></i>
+                            <a class="link-5" href="https://www.facebook.com/ducnh99" target="_blank">Contact me</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div> <!-- end all -->
+
+    <div class="mobile text-white text-center">
+        <i class="fas fa-sync-alt"></i>
+        <h5>Xoay Ngang Điện Thoại</h5>
     </div>
 
 	<script type="text/javascript" src="vendor/bootstrap.min.js"></script>
     <script type="text/javascript" src="vendor/jquery-3.4.1.js"></script>
+	<script type="text/javascript" src="js/app.js" ></script>
+	<script type="text/javascript" src="js/jquery.js" ></script>
 </body>
 </html>
