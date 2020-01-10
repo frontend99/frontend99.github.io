@@ -1,25 +1,25 @@
 ﻿document.addEventListener("DOMContentLoaded",function(){
-    var divPress = document.querySelector('.press'),
-    divContent = document.querySelector('.content'),
-    divCrossbar =  document.querySelector('.crossbar'),
-    pCLick =  document.querySelector('.pClick'),
-    h3 = document.querySelector('h3'),
-    statusButton = 0;
+    var countDownDate = new Date("Jan 25, 2020 00:00:00").getTime();
+    var x = setInterval(function() {
+    var now = new Date().getTime();
+    var distance = countDownDate - now;
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
 
-    divPress.addEventListener('click', function(){
-        divPress.classList.toggle('press-down');
-        h3.classList.toggle('h3-hide');
-        divContent.classList.toggle('scale-full');
-        divCrossbar.classList.toggle('style-crossbar');
-        if(statusButton == 0){
-            pCLick.innerHTML = "Home";
-            statusButton = 1;
-        }
-        else if(statusButton == 1){
-            pCLick.innerHTML = "Click";
-            statusButton = 0;
-        }
-        console.log(statusButton);
-        
-    })
+    document.getElementById("ngay").innerHTML = days;
+    document.getElementById("gio").innerHTML = hours;
+    document.getElementById("phut").innerHTML = minutes;
+    document.getElementById("giay").innerHTML = seconds;
+
+    if (distance < 0) {
+        clearInterval(x);
+        document.getElementById("ngay").innerHTML = "EXPIRED";
+        document.getElementById("gio").innerHTML = "EXPIRED";
+        document.getElementById("phut").innerHTML = "EXPIRED";
+        document.getElementById("giay").innerHTML = "EXPIRED";
+    }
+    }, 1000);
+    
 },false)
