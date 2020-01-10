@@ -107,39 +107,39 @@ Code by Proton*/
     .content-circle{}
     .divingbar{}
     .divingbar-1{
-        width: 44%;
+        width: 46%;
         height: 65%;
-        margin-top: -23%;
-        transform: rotate(20deg);
+        margin-top: -22%;
+        transform: rotate(18deg);
         margin-left: 6%;
     }
     .divingbar-2{
-        width: 48%;
+        width: 46%;
         height: 62%;
-        margin-top: -41%;
-        transform: rotate(52deg);
-        margin-left: 13%;
+        margin-top: -40%;
+        transform: rotate(54deg);
+        margin-left: 14%;
     }
     .divingbar-3{
-        width: 48%;
-        height: 66%;
-        margin-top: -36%;
+        width: 44%;
+        height: 69%;
+        margin-top: -34%;
         transform: rotate(90deg);
-        margin-left: 26.5%;
+        margin-left: 28%;
     }
     .divingbar-4{
-        width: 50%;
-        height: 63%;
-        margin-top: -30%;
-        transform: rotate(127deg);
-        margin-left: 40%;
+        width: 44%;
+        height: 69%;
+        margin-top: -27%;
+        transform: rotate(129deg);
+        margin-left: 42%;
     }
     .divingbar-5{
-        width: 47%;
-        height: 69%;
-        margin-top: -21%;
-        transform: rotate(162deg);
-        margin-left: 51%;
+        width: 44%;
+        height: 68%;
+        margin-top: -20%;
+        transform: rotate(166deg);
+        margin-left: 50%;
     }
     .divingbar i{
         font-size: 20px;
@@ -150,23 +150,23 @@ Code by Proton*/
     }
     .content-diving-3{
     left: 10%;
-    top: 5%;
+    top: 3%;
 }
     .content-diving-1{
-    top: 6%;
-    left: 6%;
+    top: 1%;
+    left: 7%;
 }
     .content-diving-2{
     left: 7%;
-    top: 2%;
+    top: -1%;
 }
     .content-diving-4{
-    left: 15%;
+    left: 7%;
     top: 4%;
 }
     .content-diving-5{
-    left: 16%;
-    top: 6%;
+    left: 10%;
+    top: 4%;
 }
 }
 @media only screen and (min-device-width : 677px) and (max-device-width : 767px){
