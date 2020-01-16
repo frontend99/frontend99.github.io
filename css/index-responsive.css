@@ -9,8 +9,9 @@ Code by Proton*/
         overflow: hidden;
     }
     .profile{
-    font-size: 25px;
-    width: 180px;
+    font-size: 20px;
+    width: 240px;
+    text-align: center;
 }
     .top{
         width: 75%;
@@ -103,7 +104,7 @@ Code by Proton*/
         height: 40%;
         margin: auto;
     }
-    .chuctet{width: 100%;}
+    .chuctet{width: 100%;margin-top: 20px;}
     .bot-img-2{
         width: 25%;
         margin-left: 13.5%;
