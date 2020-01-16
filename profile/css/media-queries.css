@@ -256,3 +256,42 @@
     .contact{display: none;}
     footer{opacity: 1}
     }/*end css 577-767px - code by Proton*/
+    @media (min-width: 1920px){
+        header{
+    height: 970px;
+}
+
+.header_left {
+    padding-top: 60px;
+}
+        .about{
+    height: 650px;
+}
+        .experience{
+    height: 900px;
+}
+
+.experience.appear_experience {
+    padding-top: 100px;
+}
+        .skill{
+    height: 700px;
+}
+        .more{
+    height: 850px;
+}
+
+.more.appear_more .container {
+    padding-top: 50px;
+}
+        .project{
+    height: 710px;
+}
+
+.project .container {
+    padding-top: 30px;
+}
+        .contact{
+    height: 780px;
+}
+    }

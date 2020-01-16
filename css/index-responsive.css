@@ -8,6 +8,10 @@ Code by Proton*/
         background-size: cover;
         overflow: hidden;
     }
+    .profile{
+    font-size: 25px;
+    width: 180px;
+}
     .top{
         width: 75%;
         height: 30%;
@@ -224,6 +228,9 @@ Code by Proton*/
         background-size: cover;
         overflow: hidden;
     }
+    .profile{
+    margin-top: 70px;
+}
     .phaotet img{
         height: 85%;
         width: auto;
@@ -246,6 +253,7 @@ Code by Proton*/
         background-size: cover;
         overflow: hidden;
     }
+    .profile{}
     .top{
         width: 70%;
         height: 25%;
