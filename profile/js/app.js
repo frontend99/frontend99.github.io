@@ -58,7 +58,7 @@
 			nav_li[0].classList.add('border_li');
 			nav_li[1].classList.remove('border_li');
 		}
-		if(window.pageYOffset > (experience.offsetTop - 350)){
+		if(window.pageYOffset > (experience.offsetTop - 400)){
 			experience.classList.add('appear_experience');
 		}
 		if(window.pageYOffset > (experience.offsetTop - 150)){
@@ -92,7 +92,7 @@
 			nav_li[2].classList.add('border_li');
 			nav_li[3].classList.remove('border_li');
 		}
-		if(window.pageYOffset > (more.offsetTop - 350)){
+		if(window.pageYOffset > (more.offsetTop - 400)){
 			more.classList.add('appear_more');
 		}
 		if(window.pageYOffset > (more.offsetTop - 150)){
