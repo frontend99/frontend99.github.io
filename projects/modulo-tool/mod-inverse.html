@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi"><head>
-    <title>Modulo Tool Check</title>
+    <title>Modulo Inverse</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">  
     <link rel="stylesheet" href="vendor/bootstrap.css">
@@ -39,6 +39,22 @@
           </ul>
         </div>
     </nav>
+
+    <div class="mod-inverse col-sm-5 text-center">
+      <h3 class="mt-5 mb-5">Tìm modulo nghịch đảo theo công thức <br> A^(-1) mod B</h3>
+      <form onsubmit="return modInverse();" id="form2">
+          <div class="row">
+              <div class="form-group col-sm-6">
+                  <input type="number" class="form-control A2"  placeholder="Nhập A" id="input-mod-inverse-A">
+              </div>
+              <div class="form-group col-sm-6">
+                  <input type="number" class="form-control B2"  placeholder="Nhập B" id="input-mod-inverse-B">
+              </div>
+              <button type="submit" class="btn btn-primary col-sm-3 mt-5 mb-5 button1" onclick="">XEM KẾT QUẢ</button>
+              <h4 class="mb-2 col-sm-12" id="result-mod-inverse" style="color:red;">KẾT QUẢ = </h4>
+          </div>
+      </form>
+  </div>
 
     <footer class="text-center">
       <p>© Copyright 2020. All rights reserved.
