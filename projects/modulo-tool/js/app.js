@@ -6,6 +6,9 @@
         $('#form2').on('submit', function(e) {
             e.preventDefault();
         });
+        $('#form3').on('submit', function(e) {
+            e.preventDefault();
+        });
     });
 
     modCalculator = () => {
@@ -17,14 +20,14 @@
         var B1 = parseInt(inputB1);
         var C1 = parseInt(inputC1);
         if(inputA1=="" || inputB1=="" || inputC1=="")
-            p1.innerHTML = "ERROR - Chưa nhập đủ số";
+            p1.innerHTML = `<i class="fas fa-exclamation-triangle" style="margin-right:10px;"></i> ERROR - Chưa nhập đủ số`;
         else{
             var Result1 = recursiveModCalculator(A1,B1,C1);
             if(A1==0 && B1==0){
-                p1.innerHTML = "ERROR - Làm gì có 0 mũ 0 ?";
+                p1.innerHTML = `<i class="fas fa-exclamation-triangle" style="margin-right:10px;"></i> ERROR - Làm gì có 0 mũ 0 ?`;
             }
             else if(C1==0){
-                p1.innerHTML = "ERROR - số C phải khác 0";
+                p1.innerHTML = `<i class="fas fa-exclamation-triangle" style="margin-right:10px;"></i>ERROR - số C phải khác 0`;
             }
             else if (Number.isSafeInteger(Result1) == true && Result1)
                 {
@@ -33,7 +36,7 @@
                     document.getElementById("input-mod-calculator-B").value = "";
                     document.getElementById("input-mod-calculator-C").value = "";
                 }
-            else p1.innerHTML = "ERROR - Ngoài phạm vi tính";
+            else p1.innerHTML = `<i class="fas fa-exclamation-triangle" style="margin-right:10px;"></i> ERROR - Ngoài phạm vi tính`;
         }
     }
 
@@ -67,15 +70,41 @@
                 Result2 = i;
         }
         if(inputA2=="" || inputB2=="" )
-            p2.innerHTML = "ERROR - Chưa nhập đủ số";
+            p2.innerHTML = `<i class="fas fa-exclamation-triangle" style="margin-right:10px;"></i>ERROR - Chưa nhập đủ số`;
         else {
             if(A2==0 || B2==0){
-                p2.innerHTML = "A và B phải khác 0";
+                p2.innerHTML = `<i class="fas fa-exclamation-triangle" style="margin-right:10px;"></i> ERROR - A và B phải khác 0`;
             }
             else if(Result2)
                 p2.innerHTML = "NGHỊCH ĐẢO = " + Result2;
             else if(Result2 == null)
-                p2.innerHTML = "ERROR - Không tồn tại nghịch đảo";
+                p2.innerHTML = `<i class="fas fa-exclamation-triangle" style="margin-right:10px;"></i> ERROR - Không tồn tại nghịch đảo`;
         }
+    }
+
+    modPrimitiveRoot = () => {
+        var p3 = document.getElementById("result-mod-primitive-root");
+        var inputA3 = document.getElementById("input-mod-primitive-root-A").value;
+        var inputB3 = document.getElementById("input-mod-primitive-root-B").value;
+        var A3 = parseInt(inputA3);
+        var B3 = parseInt(inputB3);
+        var Result3 = B3-1;
+        for(var i=1;i<Result3;i++){
+            var check3 = recursiveModCalculator(A3,i,B3);
+            if(check3 && check3==1){
+                Result3 = i;
+            }
+            else
+                Result3 = B3-1;
+        }
+        if(inputA3=="" || inputB3=="" )
+            p3.innerHTML = `<i class="fas fa-exclamation-triangle" style="margin-right:10px;"></i> ERROR - Chưa nhập đủ số`;
+        else {
+            if(Result3!=B3-1){
+                p3.innerHTML = `KHÔNG - vì tồn tại <br> ${A3}^${Result3} mod ${B3} = 1`;
+            }
+            else if(Result3==B3-1)
+                p3.innerHTML = `CÓ nha <i class="fas fa-heart ml-2"></i>`;
+        } 
     }
 },false)

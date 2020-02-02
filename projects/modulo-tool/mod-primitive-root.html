@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi"><head>
-    <title>Modulo Tool Check</title>
+    <title>Kiểm tra căn nguyên thủy</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">  
     <link rel="stylesheet" href="vendor/bootstrap.css">
@@ -39,7 +39,22 @@
           </ul>
         </div>
     </nav>
-    <h5 class="text-center mt-5">COMING SOON...</h5>
+    <div class="mod-primitive-root col-sm-5 text-center">
+      <h3 class="mt-5 mb-3">Kiểm tra <br> A có phải là căn nguyên thủy của B không ?</h3>
+      <p class="mb-5" style="color: red;font-size: 18px;">(hiện tại chỉ check được với B là số nguyên tố)</p>
+      <form onsubmit="return modPrimitiveRoot();" id="form3">
+          <div class="row">
+              <div class="form-group col-sm-6">
+                  <input type="number" class="form-control A3"  placeholder="Nhập A" id="input-mod-primitive-root-A">
+              </div>
+              <div class="form-group col-sm-6">
+                  <input type="number" class="form-control B3"  placeholder="Nhập B" id="input-mod-primitive-root-B">
+              </div>
+              <button type="submit" class="btn btn-primary col-sm-3 mt-5 mb-5 button1" onclick="">XEM KẾT QUẢ</button>
+              <h4 class="mb-2 col-sm-12" id="result-mod-primitive-root" style="color:red;"></h4>
+          </div>
+      </form>
+  </div>
 	<script type="text/javascript" src="vendor/bootstrap.min.js"></script>
     <script type="text/javascript" src="vendor/jquery-3.4.1.js"></script>
 	<script type="text/javascript" src="js/app.js" ></script>
