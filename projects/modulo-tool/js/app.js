@@ -16,11 +16,44 @@
         var A1 = parseInt(inputA1);
         var B1 = parseInt(inputB1);
         var C1 = parseInt(inputC1);
-        var Result1 = A1**B1-(parseInt(A1**B1/C1))*C1;
-        if (Number.isSafeInteger(Result1) == true)
-            p1.innerHTML = "KẾT QUẢ = " + Result1;
-        else p1.innerHTML = "ERROR - Ngoài phạm vi tính";
+        if(inputA1=="" || inputB1=="" || inputC1=="")
+            p1.innerHTML = "ERROR - Chưa nhập đủ số";
+        else{
+            var Result1 = recursiveModCalculator(A1,B1,C1);
+            if(A1==0 && B1==0){
+                p1.innerHTML = "ERROR - Làm gì có 0 mũ 0 ?";
+            }
+            else if(C1==0){
+                p1.innerHTML = "ERROR - số C phải khác 0";
+            }
+            else if (Number.isSafeInteger(Result1) == true && Result1)
+                {
+                    p1.innerHTML = `${A1}^${B1} mod ${C1} = ${Result1}`;
+                    document.getElementById("input-mod-calculator-A").value = "";
+                    document.getElementById("input-mod-calculator-B").value = "";
+                    document.getElementById("input-mod-calculator-C").value = "";
+                }
+            else p1.innerHTML = "ERROR - Ngoài phạm vi tính";
+        }
     }
+
+
+    // code Javascript x^n mod m
+    recursiveModCalculator = (x,n,m) => {
+        var p = null;
+        var q = parseInt(n/2);
+        if (n==0)
+            return 1;
+        else {
+            p=parseInt(recursiveModCalculator(x,q,m));
+            if (n%2==0) 
+                return (p*p)%m;
+            else
+                return (p*p*x)%m;
+        }
+    }
+    
+    
 
     modInverse = () => {
         var p2 = document.getElementById("result-mod-inverse");
@@ -33,9 +66,16 @@
             if((A2*i-1)%B2 == 0)
                 Result2 = i;
         }
-        if(Result2)
-            p2.innerHTML = "KẾT QUẢ = " + Result2;
-        else if(Result2 == null)
-            p2.innerHTML = "ERROR - Không tồn tại nghịch đảo";
+        if(inputA2=="" || inputB2=="" )
+            p2.innerHTML = "ERROR - Chưa nhập đủ số";
+        else {
+            if(A2==0 || B2==0){
+                p2.innerHTML = "A và B phải khác 0";
+            }
+            else if(Result2)
+                p2.innerHTML = "NGHỊCH ĐẢO = " + Result2;
+            else if(Result2 == null)
+                p2.innerHTML = "ERROR - Không tồn tại nghịch đảo";
+        }
     }
 },false)
