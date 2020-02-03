@@ -9,6 +9,9 @@
         $('#form3').on('submit', function(e) {
             e.preventDefault();
         });
+        $('#form4').on('submit', function(e) {
+            e.preventDefault();
+        });
     });
 
     modCalculator = () => {
@@ -106,5 +109,35 @@
             else if(Result3==B3-1)
                 p3.innerHTML = `CÓ nha <i class="fas fa-heart ml-2"></i>`;
         } 
+    }
+
+    modLogarit = () => {
+        var p4 = document.getElementById("result-mod-logarit");
+        var inputA4 = document.getElementById("input-mod-logarit-A").value;
+        var inputB4 = document.getElementById("input-mod-logarit-B").value;
+        var inputC4 = document.getElementById("input-mod-logarit-C").value;
+        var A4 = parseInt(inputA4);
+        var B4 = parseInt(inputB4);
+        var C4 = parseInt(inputC4);
+        var Result4 = null;
+        var check4 = recursiveModCalculator(B4,1,C4);
+        for(var i=0;i<=C4-1;i++){
+            if(recursiveModCalculator(A4,i,C4)==check4)
+                Result4 = i;
+        }
+        if(inputA4=="" || inputB4=="" || inputC4=="")
+            p4.innerHTML = `<i class="fas fa-exclamation-triangle" style="margin-right:10px;"></i> ERROR - Chưa nhập đủ số`;
+        else if(A4==0 && B4==0){
+            p4.innerHTML = `<i class="fas fa-exclamation-triangle" style="margin-right:10px;"></i> ERROR - Không có log₀ 0`;
+        }
+        else if(C4==0){
+            p4.innerHTML = `<i class="fas fa-exclamation-triangle" style="margin-right:10px;"></i>ERROR - số c phải khác 0`;
+        }
+        else{
+            if(Result4!=null)
+                p4.innerHTML = `KẾT QUẢ = ${Result4}`;
+            else if(Result4==null)
+                p4.innerHTML = `<i class="fas fa-exclamation-triangle" style="margin-right:10px;"></i> ERROR - Không có kết quả`;
+        }
     }
 },false)

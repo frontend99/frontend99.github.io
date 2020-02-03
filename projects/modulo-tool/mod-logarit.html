@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="vi"><head>
-    <title>Modulo Tool Check</title>
+    <title>Modulo Logarit</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">  
     <link rel="stylesheet" href="vendor/bootstrap.css">
@@ -22,7 +22,7 @@
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
             <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
+              <a class="nav-link" href="index.html">Trang chủ</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="mod-calculator.html">Tính A^B mod C</a>
@@ -39,7 +39,24 @@
           </ul>
         </div>
     </nav>
-    <h5 class="text-center mt-5">COMING SOON...</h5>
+    <div class="mod-logarit col-sm-5 text-center">
+      <h3 class="mt-5 mb-5">Tính  logₐ b mod c  =  ?</h3>
+      <form onsubmit="return modLogarit();" id="form4">
+          <div class="row">
+              <div class="form-group col-sm-4">
+                  <input type="number" class="form-control A4"  placeholder="Nhập a" id="input-mod-logarit-A">
+              </div>
+              <div class="form-group col-sm-4">
+                  <input type="number" class="form-control B4"  placeholder="Nhập b" id="input-mod-logarit-B">
+              </div>
+              <div class="form-group col-sm-4">
+                  <input type="number" class="form-control C4"  placeholder="Nhập c" id="input-mod-logarit-C">
+              </div>
+              <button type="submit" class="btn btn-primary col-sm-3 mt-5 mb-5 button1" onclick="">XEM KẾT QUẢ</button>
+              <h4 class="mb-2 col-sm-12" id="result-mod-logarit" style="color:red;">KẾT QUẢ = </h4>
+          </div>
+      </form>
+      </div>
 	<script type="text/javascript" src="vendor/bootstrap.min.js"></script>
     <script type="text/javascript" src="vendor/jquery-3.4.1.js"></script>
 	<script type="text/javascript" src="js/app.js" ></script>

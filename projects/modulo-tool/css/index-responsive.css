@@ -3,5 +3,6 @@ Code by Proton*/
 
 @media (max-width: 576px){
     .mobile{display: block!important; padding: 30px;}
-    footer{position: fixed;bottom: 20px;padding: 20px;}
+    footer{left: 0%;}
+    .pc{display: none!important;}
 }
