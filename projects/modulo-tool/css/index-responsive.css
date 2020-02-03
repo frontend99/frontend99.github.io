@@ -5,5 +5,6 @@ Code by Proton*/
     .mobile{display: block!important; padding: 30px;}
     footer{left: 0%;}
     .pc{display: none!important;}
-    .mod-calculator,.mod-inverse,.mod-primitive-root,.mod-logarit{margin-top: 40px!important;}
+    .mod-calculator,.mod-inverse,.mod-primitive-root,.mod-logarit{margin-top: 40px!important; margin-bottom: 30px;}
+    h4.line-height{display: none!important;}
 }
