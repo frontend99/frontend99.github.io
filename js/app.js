@@ -1,5 +1,5 @@
 ﻿document.addEventListener("DOMContentLoaded",function(){
-    var countDownDate = new Date("April 25, 2020 00:00:00").getTime();
+    var countDownDate = new Date("July 31, 2020 00:00:00").getTime();
     var x = setInterval(function() {
     var now = new Date().getTime();
     var distance = countDownDate - now;
